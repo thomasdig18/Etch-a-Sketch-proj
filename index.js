@@ -1,15 +1,22 @@
-let board = document.querySelector(".board");
+function fillBoard(num) {
+    let board = document.querySelector(".board");
+    let squares = board.querySelectorAll('div');
+    squares.forEach((div) => div.remove());
+    board.style.gridTemplateColumns = `repeat(${num} , 1fr)`;
+    board.style.gridTemplateRows = `repeat(${num} , 1fr)`;
 
-board.style.gridTemplateColumns = "repeat(16 , 1fr)";
-board.style.gridTemplateRows = "repeat(16 , 1fr)";
-
-for(let i = 0; i < 256; i++) {
-    let square = document.createElement('div');
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = 'black';
-    });
-    square.style.backgroundColor = 'white';
-    board.insertAdjacentElement("beforeend", square);
+    let amount = num * num;
+    for(let i = 0; i < amount; i++) {
+        let square = document.createElement('div');
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        });
+        square.style.backgroundColor = 'white';
+        board.insertAdjacentElement("beforeend", square);
+    }
 }
 
 
+function changeSize(input) {
+    fillBoard(input);
+}
