@@ -19,5 +19,8 @@ function fillBoard(num) {
 fillBoard(16);
 
 function changeSize(input) {
+    if (input < 2 || input > 100) {
+        alert('Error pick size between 2 and 100');
+    }
     fillBoard(input);
 }
