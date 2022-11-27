@@ -1,3 +1,6 @@
+let color = 'black';
+
+
 function fillBoard(num) {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll('div');
@@ -8,9 +11,7 @@ function fillBoard(num) {
     let amount = num * num;
     for(let i = 0; i < amount; i++) {
         let square = document.createElement('div');
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
-        });
+        square.addEventListener('mouseover', squareColor);
         square.style.backgroundColor = 'white';
         board.insertAdjacentElement("beforeend", square);
     }
@@ -24,4 +25,12 @@ function changeSize(input) {
     } else {
         fillBoard(input);
     }
+}
+
+function squareColor() {
+   this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+    color = choice;
 }

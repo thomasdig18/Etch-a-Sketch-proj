@@ -19,13 +19,13 @@
     </div>
     <div class="button-box"></dib>
         <div class="buttons">
-            <button></button>
-            <button></button>
-            <button></button>
+            <button onclick="changeColor('black')">Black</button>
+            <button onclick="changeColor('red')">Red</button>
+            <button onclick="changeColor('green')">Random</button>
         </div>
     </div>
     <div class="size-box">
-        <input type="text" placeholder="Size" value="16" onchange="changeSize(this.value)" />
+        <input type="text" placeholder="Size" onchange="changeSize(this.value)" />
         <button id="board-size">Set Size</button>
     </div>
 
