@@ -16,6 +16,7 @@ function fillBoard(num) {
     }
 }
 
+fillBoard(16);
 
 function changeSize(input) {
     fillBoard(input);

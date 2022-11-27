@@ -22,7 +22,7 @@ body {
 .board {
     width: 600px;
     height: 600px;
-    background-color: white;
+    
     display: grid;
     border: 8px solid black;
     border-radius: 10px;
